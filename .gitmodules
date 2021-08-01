@@ -1,6 +1,3 @@
-[submodule "pack/henry/start/bat.vim"]
-	path = pack/henry/start/bat.vim
-	url = git@github.com:jamespwilliams/bat.vim.git
 [submodule "pack/henry/start/fugitive"]
 	path = pack/henry/start/fugitive
 	url = https://tpope.io/vim/fugitive.git
