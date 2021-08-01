@@ -1,0 +1,59 @@
+snippet il "Snippet for making an inline equation" w
+\\(${1:expression}\\)$0
+endsnippet
+
+snippet env "\begin{<name>} ... \end{<name>}" b
+\\begin\{${1:env}\}
+$0
+\\end\{$1\}
+endsnippet
+
+snippet eqn "Unnumbered equation environment" b
+\\begin\{equation*\}
+$0
+\\end\{equation*\}
+endsnippet
+
+snippet bp "Begin proof block" b
+\\begin\{proof\}
+$0
+\\end\{proof\}
+endsnippet
+
+snippet {{
+\\mleft\\\{ $0 \\mright\\\}
+endsnippet
+
+snippet init "Standard headers and document initialization"
+\\documentclass[12pt]\{article\}
+\\usepackage[T1]\{fontenc\} % This mysterious package allows me to use accented characters and pipes without unexpected results
+\\usepackage[margin=1in]\{geometry\}
+\\usepackage\{enumitem\}
+\\usepackage\{amsthm\}
+
+\\usepackage\{linalgebra\}
+\\usepackage\{IEEEtrantools\}
+
+\\theoremstyle\{plain\}
+\\newtheorem\{sentinel\}\{\}[section]
+\\newtheorem\{thm\}[sentinel]\{Theorem\}
+\\newtheorem\{lem\}[sentinel]\{Lemma\}
+\\newtheorem\{prop\}[sentinel]\{Proposition\}
+
+\\theoremstyle\{definition\}
+\\newtheorem\{defn\}[sentinel]\{Definition\}
+\\newtheorem*\{warmup\}\{Warm Up\}
+\\newtheorem*\{wksht\}\{Worksheet\}
+
+\\theoremstyle\{remark\}
+\\newtheorem*\{stat\}\{Statement\}
+\\newtheorem*\{qust\}\{Question\}
+
+\\title\{${1:title}\}
+\\author\{Henry Lancelle\}
+\\date\{\}
+\\begin\{document\}
+\\maketitle
+$0
+\\end\{document\}
+endsnippet
