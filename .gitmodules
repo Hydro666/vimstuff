@@ -28,3 +28,6 @@
 [submodule "pack/henry/start/YouCompleteMe"]
 	path = pack/henry/start/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe
+[submodule "pack/henry/start/bat.vim"]
+	path = pack/henry/start/bat.vim
+	url = git@github.com:jamespwilliams/bat.vim.git
