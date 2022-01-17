@@ -31,3 +31,6 @@
 [submodule "pack/henry/start/bat.vim"]
 	path = pack/henry/start/bat.vim
 	url = git@github.com:jamespwilliams/bat.vim.git
+[submodule "pack/henry/start/vim-go"]
+	path = pack/henry/start/vim-go
+	url = https://github.com/fatih/vim-go.git
