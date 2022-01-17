@@ -49,7 +49,7 @@ if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
-  colorscheme bat
+  colorscheme nomine
 endif
 
 """" UltiSnips
@@ -59,3 +59,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetsDir="/home/henry/.vim/plugged/ultisnips/UltiSnips"
 
 let g:python_highlight_all = 1
+
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+      \ }
+      \ }
