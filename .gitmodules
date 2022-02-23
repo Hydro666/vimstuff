@@ -37,3 +37,6 @@
 [submodule "pack/henry/start/coc.nvim"]
 	path = pack/henry/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
+[submodule "pack/henry/start/vista.vim"]
+	path = pack/henry/start/vista.vim
+	url = https://github.com/liuchengxu/vista.vim.git
