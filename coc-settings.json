@@ -1,0 +1,30 @@
+{
+    "diagnostic.errorSign": "✘",
+    "diagnostic.warningSign": "!",
+    "diagnostic.infoSign": "?",
+    "diagnostic.checkCurrentLine": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "html",
+        "json",
+        "css",
+        "scss",
+        "py",
+        "go"
+    ],
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod"
+            ],
+            "filetypes": [
+                "go"
+            ]
+        }
+    },
+    "go.goplsOptions": {
+        "staticcheck": true
+    },
+    "python.formatting.provider": "black"
+}

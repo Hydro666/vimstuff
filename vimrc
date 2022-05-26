@@ -1,16 +1,10 @@
 syntax on
-imap <C-s> <Esc>:w<CR>
-map <F8> :!cargo run<CR>
-map <F7> :!cargo build<CR>
 nnoremap gc :e ~/.vim/vimrc<CR>
-nnoremap go :YcmCompleter GoToDefinition<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-k> :Buffers<CR>
 nnoremap <C-s> :Rg 
 nnoremap <Esc><Esc> :nohlsearch<CR><CR> <C-w>z
 command So source $MYVIMRC
-"Will only work if smart indent is on.
-"inoremap { {<CR>}<C-o>O
 inoremap kj <Esc>
 set number
 set expandtab
@@ -41,6 +35,8 @@ set nocompatible
 set directory^=/home/henry/.vim/swapfiles//
 filetype on
 filetype plugin indent on
+
+let mapleader="\\"
 
 " Setting this will make tmux not display wrong colors.
 set background=dark
@@ -80,9 +76,30 @@ let g:go_fmt_command = "goimports"
 " Status line types/signatures
 let g:go_auto_type_info = 1
 
-
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
 
-let g:ycm_autoclose_preview_window_after_completion = 1
+autocmd FileType rs nmap <leader>r :RustRun<CR>
+
+" Should check if coc is loaded, and if it is:
+let g:go_def_mapping_enabled = 0
+let go_doc_keywordprg_enabled = 0
+autocmd CursorHold * silent call CocActionAsync('highlight')
+nnoremap <silent> K :call CocActionAsync('doHover')<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <C-j> :call CocAction('format')<CR>:w<CR>
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <c-@> coc#refresh()

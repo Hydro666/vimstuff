@@ -19,6 +19,7 @@ hi Comment ctermfg=242
 hi ColorColumn ctermfg=NONE ctermbg=236
 hi Visual ctermbg=237
 hi CursorLineNR term=bold cterm=bold guifg=#fff3a8
+hi Pmenu guibg=#3d3d3d
 
 " Python specific colors.
 hi pythonComment ctermfg=242
