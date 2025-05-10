@@ -1,6 +1,6 @@
 syntax on
 nnoremap gc :e ~/.vim/vimrc<CR>
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :GFiles<CR>
 nnoremap <C-k> :Buffers<CR>
 nnoremap <C-s> :Rg 
 nnoremap <Esc><Esc> :nohlsearch<CR><CR> <C-w>z
@@ -70,7 +70,7 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
 
 " Auto formatting and importing
-let g:go_fmt_autosave = 1
+let g:go_fmt_autosave = 0
 let g:go_fmt_command = "goimports"
 
 " Status line types/signatures
