@@ -25,9 +25,6 @@
 [submodule "pack/henry/start/vim-vinegar"]
 	path = pack/henry/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
-[submodule "pack/henry/start/YouCompleteMe"]
-	path = pack/henry/opt/YouCompleteMe
-	url = https://github.com/ycm-core/YouCompleteMe
 [submodule "pack/henry/start/bat.vim"]
 	path = pack/henry/start/bat.vim
 	url = git@github.com:jamespwilliams/bat.vim.git
