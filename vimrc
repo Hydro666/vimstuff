@@ -81,25 +81,3 @@ autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
 
 autocmd FileType rs nmap <leader>r :RustRun<CR>
-
-" Should check if coc is loaded, and if it is:
-let g:go_def_mapping_enabled = 0
-let go_doc_keywordprg_enabled = 0
-autocmd CursorHold * silent call CocActionAsync('highlight')
-nnoremap <silent> K :call CocActionAsync('doHover')<CR>
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> <C-j> :call CocAction('format')<CR>:w<CR>
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <c-@> coc#refresh()
