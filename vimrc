@@ -1,6 +1,6 @@
 syntax on
 nnoremap gc :e ~/.vim/vimrc<CR>
-nnoremap <C-p> :GFiles<CR>
+nnoremap <C-p> :Files<CR>
 nnoremap <C-k> :Buffers<CR>
 nnoremap <C-s> :Rg 
 nnoremap <Esc><Esc> :nohlsearch<CR><CR> <C-w>z
